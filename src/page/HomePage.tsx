@@ -1,6 +1,6 @@
 import { Stack } from "@mui/material";
 import { ModalWrapperStyled } from "../components/ModalStyled/ModalWrapperStyled";
-import Forms from "../components/Forms/Forms";
+import { Forms } from "../components/Forms/Forms";
 import { useHomePage } from "../hooks/use-home-page.hook";
 
 export const HomePage = () => {

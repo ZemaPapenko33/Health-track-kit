@@ -1,7 +1,7 @@
 import { Button, ButtonGroup, Stack, TextField } from "@mui/material";
 import { t } from "i18next";
 
-const WaterForms = () => {
+export const WaterForms = () => {
   return (
     <Stack
       width={"70%"}
@@ -22,5 +22,3 @@ const WaterForms = () => {
     </Stack>
   );
 };
-
-export default WaterForms;

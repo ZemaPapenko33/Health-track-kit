@@ -11,5 +11,3 @@ export const SwitchForms: React.FC<ISwitchForms> = ({
 }): JSX.Element | null => {
   return children.find((child) => child.props[`data-value`] === value) ?? null;
 };
-
-export default SwitchForms;

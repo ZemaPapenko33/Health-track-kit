@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { t } from "i18next";
 
-const FoodForms = () => {
+export const FoodForms = () => {
   return (
     <Stack
       width={"70%"}
@@ -41,5 +41,3 @@ const FoodForms = () => {
     </Stack>
   );
 };
-
-export default FoodForms;

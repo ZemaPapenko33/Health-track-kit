@@ -1,8 +1,7 @@
 import { Button, ButtonGroup, Stack, TextField } from "@mui/material";
 import { t } from "i18next";
-import React from "react";
 
-const SleepForm = () => {
+export const SleepForm = () => {
   return (
     <Stack
       width={"70%"}
@@ -19,5 +18,3 @@ const SleepForm = () => {
     </Stack>
   );
 };
-
-export default SleepForm;

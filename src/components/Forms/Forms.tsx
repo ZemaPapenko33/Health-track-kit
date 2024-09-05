@@ -1,15 +1,15 @@
 import React from "react";
-import SwitchForms from "./FormsSwitch";
-import FoodForms from "../FoodForm/FoodForms";
-import WaterForms from "../WaterForm/WaterForms";
-import MoodForm from "../MoodForm/MoodForm";
-import SleepForm from "../SleepForm/SleepForm";
+import { SwitchForms } from "./FormsSwitch";
+import { FoodForms } from "../FoodForm/FoodForms";
+import { WaterForms } from "../WaterForm/WaterForms";
+import { MoodForm } from "../MoodForm/MoodForm";
+import { SleepForm } from "../SleepForm/SleepForm";
 
 interface IForms {
   value: string;
 }
 
-const Forms: React.FC<IForms> = ({ value }) => {
+export const Forms: React.FC<IForms> = ({ value }) => {
   return (
     <SwitchForms value={value}>
       <FoodForms data-value={"food"} />
@@ -19,5 +19,3 @@ const Forms: React.FC<IForms> = ({ value }) => {
     </SwitchForms>
   );
 };
-
-export default Forms;

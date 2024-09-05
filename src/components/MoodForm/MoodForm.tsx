@@ -3,7 +3,7 @@ import MoodOutlinedIcon from "@mui/icons-material/MoodOutlined";
 import SentimentNeutralOutlinedIcon from "@mui/icons-material/SentimentNeutralOutlined";
 import SentimentDissatisfiedOutlinedIcon from "@mui/icons-material/SentimentDissatisfiedOutlined";
 
-const MoodForm = () => {
+export const MoodForm = () => {
   return (
     <Stack
       width={"70%"}
@@ -25,5 +25,3 @@ const MoodForm = () => {
     </Stack>
   );
 };
-
-export default MoodForm;
