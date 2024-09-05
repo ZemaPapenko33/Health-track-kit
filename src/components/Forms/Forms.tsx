@@ -6,16 +6,16 @@ import MoodForm from "../MoodForm/MoodForm";
 import SleepForm from "../SleepForm/SleepForm";
 
 interface IForms {
-  id: number;
+  value: string;
 }
 
-const Forms: React.FC<IForms> = ({ id }) => {
+const Forms: React.FC<IForms> = ({ value }) => {
   return (
-    <SwitchForms id={id}>
-      <FoodForms data-id={1} />
-      <WaterForms data-id={2} />
-      <MoodForm data-id={3} />
-      <SleepForm data-id={4} />
+    <SwitchForms value={value}>
+      <FoodForms data-value={"food"} />
+      <WaterForms data-value={"water"} />
+      <MoodForm data-value={"mood"} />
+      <SleepForm data-value={"sleep"} />
     </SwitchForms>
   );
 };

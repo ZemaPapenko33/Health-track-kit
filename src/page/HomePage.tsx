@@ -1,10 +1,10 @@
 import { Stack } from "@mui/material";
-import useHomePage from "../hooks/use-home-page.hook";
 import { ModalWrapperStyled } from "../components/ModalStyled/ModalWrapperStyled";
 import Forms from "../components/Forms/Forms";
+import { useHomePage } from "../hooks/use-home-page.hook";
 
-const HomePage = () => {
-  const { homeItems, isOpen, idItem, itemOnClickHandler, itemHandleClose } =
+export const HomePage = () => {
+  const { homeItems, isOpen, valueItem, itemOnClickHandler, itemHandleClose } =
     useHomePage();
 
   return (
@@ -18,7 +18,7 @@ const HomePage = () => {
         return (
           <Stack
             key={item.id}
-            data-id={item.id}
+            data-value={item.value}
             border={0.1}
             borderRadius={"0.25rem"}
             padding={"0.25rem"}
@@ -35,10 +35,8 @@ const HomePage = () => {
         );
       })}
       <ModalWrapperStyled open={isOpen} onClose={itemHandleClose}>
-        <Forms id={idItem!} />
+        <Forms value={valueItem!} />
       </ModalWrapperStyled>
     </Stack>
   );
 };
-
-export default HomePage;

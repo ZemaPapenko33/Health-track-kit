@@ -9,20 +9,41 @@ interface HomeItem {
   id: number;
   text: string;
   icon?: React.ReactNode;
+  value: string;
 }
 
-function useHomePage() {
+export const useHomePage = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [idItem, setIdItem] = useState<number | undefined>(undefined);
+  const [valueItem, setValueItem] = useState<string>("");
   const homeItems: Array<HomeItem> = [
-    { id: 1, text: `${t("t-food")}`, icon: <RestaurantOutlinedIcon /> },
-    { id: 2, text: `${t("t-water")}`, icon: <LocalDrinkOutlinedIcon /> },
-    { id: 3, text: `${t("t-mood")}`, icon: <AddReactionOutlinedIcon /> },
-    { id: 4, text: `${t("t-sleeps")}`, icon: <BedtimeOutlinedIcon /> },
+    {
+      id: 1,
+      text: `${t("t-food")}`,
+      icon: <RestaurantOutlinedIcon />,
+      value: "food",
+    },
+    {
+      id: 2,
+      text: `${t("t-water")}`,
+      icon: <LocalDrinkOutlinedIcon />,
+      value: "water",
+    },
+    {
+      id: 3,
+      text: `${t("t-mood")}`,
+      icon: <AddReactionOutlinedIcon />,
+      value: "mood",
+    },
+    {
+      id: 4,
+      text: `${t("t-sleeps")}`,
+      icon: <BedtimeOutlinedIcon />,
+      value: "sleep",
+    },
   ];
   const itemOnClickHandler = (event: React.MouseEvent<HTMLElement>) => {
-    const id = event.currentTarget.getAttribute("data-id");
-    setIdItem(+id!);
+    const value: string = event.currentTarget.getAttribute("data-value")!;
+    setValueItem(value);
     setIsOpen(true);
   };
   const itemHandleClose = () => setIsOpen(false);
@@ -30,10 +51,8 @@ function useHomePage() {
   return {
     homeItems,
     isOpen,
-    idItem,
+    valueItem,
     itemOnClickHandler,
     itemHandleClose,
   };
-}
-
-export default useHomePage;
+};

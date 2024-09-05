@@ -2,14 +2,14 @@ import React from "react";
 
 interface ISwitchForms {
   children: Array<JSX.Element>;
-  id: number;
+  value: string;
 }
 
 export const SwitchForms: React.FC<ISwitchForms> = ({
   children,
-  id,
+  value,
 }): JSX.Element | null => {
-  return children.find((child) => child.props[`data-id`] === id) ?? null;
+  return children.find((child) => child.props[`data-value`] === value) ?? null;
 };
 
 export default SwitchForms;
