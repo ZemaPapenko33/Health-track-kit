@@ -13,7 +13,9 @@ export const HomePage = () => {
       height={"100vh"}
       alignItems={"center"}
       justifyContent={"center"}
-      padding={"0.5rem"}>
+      padding={"0.5rem"}
+      overflow={"hidden"}
+      sx={{ boxSizing: "border-box" }}>
       {homeItems.map((item) => {
         return (
           <Stack

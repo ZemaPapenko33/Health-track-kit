@@ -3,6 +3,7 @@ import RestaurantOutlinedIcon from "@mui/icons-material/RestaurantOutlined";
 import LocalDrinkOutlinedIcon from "@mui/icons-material/LocalDrinkOutlined";
 import AddReactionOutlinedIcon from "@mui/icons-material/AddReactionOutlined";
 import BedtimeOutlinedIcon from "@mui/icons-material/BedtimeOutlined";
+import EditCalendarOutlinedIcon from "@mui/icons-material/EditCalendarOutlined";
 import { useState } from "react";
 
 interface HomeItem {
@@ -39,6 +40,12 @@ export const useHomePage = () => {
       text: `${t("t-sleeps")}`,
       icon: <BedtimeOutlinedIcon />,
       value: "sleep",
+    },
+    {
+      id: 5,
+      text: `${t("t-calendar")}`,
+      icon: <EditCalendarOutlinedIcon />,
+      value: "calendar",
     },
   ];
   const itemOnClickHandler = (event: React.MouseEvent<HTMLElement>) => {
