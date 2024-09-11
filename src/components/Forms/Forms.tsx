@@ -4,6 +4,7 @@ import { FoodForms } from "../FoodForm/FoodForms";
 import { WaterForms } from "../WaterForm/WaterForms";
 import { MoodForm } from "../MoodForm/MoodForm";
 import { SleepForm } from "../SleepForm/SleepForm";
+import { CalendarForm } from "../CalendarForm/CalendarForm";
 
 interface IForms {
   value: string;
@@ -16,6 +17,7 @@ export const Forms: React.FC<IForms> = ({ value }) => {
       <WaterForms data-value={"water"} />
       <MoodForm data-value={"mood"} />
       <SleepForm data-value={"sleep"} />
+      <CalendarForm data-value={"calendar"} />
     </SwitchForms>
   );
 };
